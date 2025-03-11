@@ -3,6 +3,8 @@ import { HashLink as NavLink } from 'react-router-hash-link'
 import { FaBars, FaTimes} from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
+import mobileHeaderLogo from '../Image/infinity.png'
+import desktopHeaderLogo from '../Image/infinityrydev-high-resolution-logo-transparent.png'
 
 //Navigation anchor tag
 const NavLinks = () => {
@@ -45,12 +47,12 @@ const Navbar = () => {
         <nav className='flex  h-24 items-center justify-between w-3/4 z-10 p-5'>
             <NavLink to="/">
                 <img 
-                    src='../src/image/infinityrydev-high-resolution-logo-transparent.png' 
+                    src={desktopHeaderLogo}
                     className='hidden md:flex w-64'
                     alt='Desktop Logo'
                 />
                 <img 
-                    src='../src/image/infinity.png'
+                    src={mobileHeaderLogo}
                     className='md:hidden w-20'
                     alt='Mobile Logo'
                 />
