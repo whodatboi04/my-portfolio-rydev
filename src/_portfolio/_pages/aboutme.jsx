@@ -15,7 +15,7 @@ export default function aboutme() {
                 />
             </div>
 
-            <div className='border-2'>
+            <div>
                 <div className='flex flex-col items-center mt-8 lg:items-start lg:jutify-center px-5 lg:p-5 md:px-32 lg:w-full'>
                     <h1 className='text-mainColor text-xl font-semibold dark:text-lightGreen'>
                         About Me
