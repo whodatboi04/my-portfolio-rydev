@@ -3,6 +3,11 @@ import { MdDownload } from "react-icons/md";
 import porfilePicture from '../../Image/1-profile-img.png'
 
 export default function home() {
+
+    const contact = () => {
+        window.open('https://www.linkedin.com/in/rynmrkdlsrys/', '_blank');
+    };
+
   return (
         <section className='flex flex-col-reverse items-center justify-center p-5 lg:mt-20 lg:flex-row  lg:justify-between lg:w-3/4 lg:h-full mt-10' id='Home'>
             <div>
@@ -16,7 +21,7 @@ export default function home() {
                     an aspiring developer with passion for <br/> design, innovation, technologies
                 </p>
                 <div className='flex flex-col lg:flex-row gap-4 mt-6  items-center'>
-                    <button className='bg-mainColor w-52 p-2 rounded-full flex justify-center items-center gap-3 text-tWhite'>
+                    <button onClick={contact} className='bg-mainColor w-52 p-2 rounded-full flex justify-center items-center gap-3 text-tWhite'>
                         Contact me <MdOutlineMail color='#fff' size={20}/>
                     </button>
                     <button className='bg-lightColor w-52 p-2 rounded-full flex justify-center items-center gap-3 text-tWhite'>

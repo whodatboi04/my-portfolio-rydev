@@ -8,28 +8,34 @@ import desktopHeaderLogo from '../Image/infinityrydev-high-resolution-logo-trans
 
 //Navigation anchor tag
 const NavLinks = () => {
-    const [mode, setMode] = useState(false);
+    const [mode, setMode] = useState(() =>{
+        const savedMode = localStorage.getItem('dark');
+        return savedMode === 'true';
+    });
 
     useEffect(() => {
-        if(mode === true){
+        if(mode){
             document.documentElement.classList.add("dark");
+            localStorage.setItem('dark', mode);
         }else{
             document.documentElement.classList.remove("dark");
+            localStorage.removeItem('dark', mode);
         }
+
+      
     }, [mode]);
 
     const handleClick = () =>{
         setMode(mode === false ? true : false);
     }
-    console.log("the mode is: " + mode);  
 
     return (
-    <div className='flex gap-12 flex-col text-center items-center lg:flex-row dark:text-white'>
+    <div className='flex absolute w-full gap-12 flex-col text-center items-center lg:relative lg:flex-row bg-tWhite dark:bg-dark dark:text-white'>
         <NavLink to="#Home" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>HOME</NavLink>
         <NavLink to="#aboutMe" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>ABOUT ME</NavLink>
         <NavLink to="#project" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>PROJECT</NavLink>
         <NavLink to="#experience" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>EXPERIENCE</NavLink>
-        <NavLink to="/contact" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>CONTACT</NavLink>
+        <NavLink to="#contact" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>CONTACT</NavLink>
         <button onClick={handleClick}>{mode ? <MdLightMode /> : <MdOutlineDarkMode /> }</button>
     </div>
     );
@@ -41,7 +47,6 @@ const Navbar = () => {
     const toggledMenu = () => {
         setIsOpen(!isOpen);
     }
-    console.log(isOpen);
     return (
     <header className='flex flex-wrap justify-center w-full dark:bg-dark'>
         <nav className='flex  h-24 items-center justify-between w-3/4 z-10 p-5'>

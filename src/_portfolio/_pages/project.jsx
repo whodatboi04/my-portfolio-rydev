@@ -17,18 +17,21 @@ export default function project() {
             desc: 'The Philippine College of Physicians Official Website is an informational platform related to the organization. It is currently maintained by their IT personnel.',
             image: pcpLogo,
             link: 'https://pcp.org.ph/',
+            tools: 'WordPress, Elementor Pro, PHP, JQuery, CSS'
         },
         {
             title: 'Off to Thrift',
             desc: 'Off to Thrift is an e-commerce static website for pre-loved clothes, featuring a payment process.',
             image: ottLogo,
             link: 'https://offtothrift.vercel.app/',
+            tools: 'HTML5, CSS, JavaScript, Jquery'
         },
         {
             title: 'Infinity ry dev',
             desc: 'Infinity-ry-dev is a portfolio website that showcases my profile, projects, and work experience.',
             image: infinityDevLogo,
             link: 'https://rydev.vercel.app/',
+            tools: 'React, Tailwind CSS, Swiper.js, Vite.js'
         },
     ]
   return (
@@ -43,7 +46,7 @@ export default function project() {
                 clickable: true,
             }}
             modules={[Pagination]}
-            breakpoints={{
+            breakpoints={{  
                 640: {
                     slidesPerView: 1,
                     spaceBetween: 20,
@@ -67,8 +70,9 @@ export default function project() {
                                     <img src={p.image} alt={p.title} className='px-2 w-32 flex m-auto'/>
                                 </div>
                                 <div className='px-5'>
-                                    <h1 className='text-center my-3 text-mainColor font-semibold'>{p.title}</h1>
-                                    <p className='text-justify'>{p.desc}</p>
+                                    <h1 className='text-center my-3 text-mainColor font-semibold dark:text-lightGreen'>{p.title}</h1>
+                                    <p className='text-justify dark:text-white'>{p.desc}</p>
+                                    <p className='text-justify mt-4 text-[12px] dark:text-light'>Tools: {p.tools}</p>
                                 </div>
                                 <Button link={p.link}/>
                             </div>

@@ -19,16 +19,16 @@ export default function experience() {
                             className='w-14 mb-2 lg:w-20'
                         />
                         <div className='ml-5'>
-                            <h2 className='text-dark text-[10px] font-extrabold lg:text-sm'>PHILIPPINE COLLEGE OF PHYSICIANS</h2>
-                            <p className=' text-[10px] lg:text-sm'>IT Programmer</p>
+                            <h2 className='text-dark text-[10px] font-extrabold lg:text-sm dark:text-lightGreen'>PHILIPPINE COLLEGE OF PHYSICIANS</h2>
+                            <p className=' text-[10px] lg:text-sm dark:text-tWhite'>IT Programmer</p>
                             <p className='text-lightColor text-[9px] lg:text-sm'>09/2023 - 02/2025</p>
                         </div> 
                     </li>
                 </ul>
                 <ul className='h-[320px] px-5 relative flex flex-col justify-between mt-2 items-center overflow-hidden'>
-                    <li className='bg-mainColor rounded-full w-4 h-4  relative after:content-[""] after:absolute after:bg-mainColor after:w-[5px] after:left-[5px] after:h-screen after:-z-10'></li>
-                    <li className='bg-mainColor rounded-full w-4 h-4 z-10 relative'></li>
-                    <li className='bg-mainColor rounded-full w-4 h-4 z-10 relative'></li>
+                    <li className='bg-mainColor rounded-full w-4 h-4  relative after:content-[""] after:absolute after:bg-mainColor after:w-[5px] after:left-[5px] after:h-screen after:-z-10 dark:z-10'></li>
+                    <li className='bg-mainColor rounded-full w-4 h-4 z-10 relative dark:z-20'></li>
+                    <li className='bg-mainColor rounded-full w-4 h-4 z-10 relative dark:z-20'></li>
                 </ul>
                 <ul className='flex flex-col justify-between pl-10'>
                     <li className='flex flex-col items-center lg:items-start lg:flex-row'>
@@ -38,8 +38,8 @@ export default function experience() {
                             className='w-12 mb-2 lg:w-20'
                         />
                         <div className='ml-5'>
-                            <h2 className='text-dark text-[10px] font-extrabold lg:text-sm'>Pisopay.com Inc.</h2>
-                            <p className=' text-[10px] lg:text-sm'>Back-End Developer</p>
+                            <h2 className='text-dark text-[10px] font-extrabold lg:text-sm dark:text-lightGreen'>Pisopay.com Inc.</h2>
+                            <p className=' text-[10px] lg:text-sm dark:text-tWhite'>Back-End Developer</p>
                             <p className='text-lightColor text-[9px] lg:text-sm'>02/2025 - Present</p>
                         </div> 
                     </li>
@@ -50,8 +50,8 @@ export default function experience() {
                             className='w-14 mb-2 lg:w-20'
                         />
                         <div className='mr-5'>
-                            <h2 className='text-dark text-[10px] font-extrabold text-right lg:text-sm'>Department Of Education Manila</h2>
-                            <p className='text-right text-[10px] lg:text-sm'>IT Specialist</p>
+                            <h2 className='text-dark text-[10px] font-extrabold text-right lg:text-sm dark:text-lightGreen'>Department Of Education Manila</h2>
+                            <p className='text-right text-[10px] lg:text-sm dark:text-tWhite'>IT Specialist</p>
                             <p className='text-lightColor text-[9px] lg:text-sm text-right'>02/2023 - 07/2023</p>
                         </div> 
                     </li>
