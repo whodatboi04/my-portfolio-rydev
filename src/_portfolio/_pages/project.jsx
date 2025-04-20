@@ -62,10 +62,10 @@ export default function project() {
             }}
             className="mySwiper my-10" 
         >
-                {projects.map((p,i) => {
+                {projects.map((p, i) => {
                     return (
-                        <SwiperSlide>
-                            <div key={i} className='border-[1px] flex flex-col items-center border-light h-[30rem]  py-8 rounded-xl shadow-md lg:h-[27rem] '>
+                        <SwiperSlide key={i}>
+                            <div className='border-[1px] flex flex-col items-center border-light h-[30rem]  py-8 rounded-xl shadow-md lg:h-[27rem] '>
                                 <div className='h-32 flex flex-col justify-center'>
                                     <img src={p.image} alt={p.title} className='px-2 w-32 flex m-auto'/>
                                 </div>
