@@ -3,15 +3,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import comingSoon from '../../Image/coming-soon.jpg'
 import pcpLogo from '../../Image/pcp-logo.png'
 import ottLogo from '../../Image/ott-logo.png'
 import infinityDevLogo from '../../Image/infinity.png'
 import Button from '../../Components/Button';
-
+import Abes from '../../Image/ABES.png';
 
 export default function project() {
     const projects = [
+         {
+            title: 'Abes Media',
+            desc: 'Abes Media is a UGC‑focused content agency that helps businesses grow through engaging video content, creative strategy, and hands‑on content production.',
+            image: Abes,
+            link: 'https://abesmedia.com/',
+            tools: 'WordPress, Elementor Pro, JavaScript, CSS'
+        },
         {
             title: 'Philippine College of Physicians Website',
             desc: 'The Philippine College of Physicians Official Website is an informational platform related to the organization. It is currently maintained by their IT personnel.',
