@@ -5,13 +5,12 @@ import Portfolio from './_portfolio/portfolio';
 import Footer from './Components/Footer';
 import { Infinity } from 'ldrs/react'
 import 'ldrs/react/Infinity.css'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import gsap from 'gsap';
 
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollSmoother);
 
 function App() {
 
