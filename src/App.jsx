@@ -1,13 +1,29 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useLayoutEffect} from 'react';
 import Navbar from './Components/Navbar';
 import {BrowserRouter as Router} from "react-router-dom";
 import Portfolio from './_portfolio/portfolio';
 import Footer from './Components/Footer';
 import { Infinity } from 'ldrs/react'
 import 'ldrs/react/Infinity.css'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import gsap from 'gsap';
 
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function App() {
+
+  useLayoutEffect(() => {
+     ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 1.2,
+      normalizeScroll: true,smooth: 1,
+    });
+  }, []);
+
   const [loader, showLoader] = useState(true);
   
   useEffect(() => {
@@ -47,11 +63,16 @@ function App() {
         />
       </div>
     ) : (
-      <Router>
-        <Navbar />
-        <Portfolio />
-        <Footer />
-      </Router>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <Router>
+          <Navbar />
+          <Portfolio />
+          <Footer />
+        </Router>
+      </div>
+    </div>
+
     )
   );
 }

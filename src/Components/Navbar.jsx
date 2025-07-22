@@ -1,13 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import { HashLink as NavLink } from 'react-router-hash-link'
 import { FaBars, FaTimes} from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import mobileHeaderLogo from '../Image/infinity.png'
 import desktopHeaderLogo from '../Image/infinityrydev-high-resolution-logo-transparent.png'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import SmoothHashLink from './SmoothHashLink';
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 //Navigation anchor tag
 const NavLinks = () => {
+
+    const smootherRef = useRef(null);
+
+    useLayoutEffect(() => {
+    const smoother = ScrollSmoother.create({
+        smooth: 1.2,
+        effects: true,
+    });
+    smootherRef.current = smoother;
+
+    return () => smoother.kill();
+    }, []);
+
+
     const [mode, setMode] = useState(() =>{
         const savedMode = localStorage.getItem('dark');
         return savedMode === 'true';
@@ -30,12 +50,12 @@ const NavLinks = () => {
     }
 
     return (
-    <div className='flex absolute w-full gap-12 flex-col text-center items-center lg:relative lg:flex-row bg-tWhite dark:bg-dark dark:text-white'>
-        <NavLink to="#Home" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>HOME</NavLink>
-        <NavLink to="#aboutMe" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>ABOUT ME</NavLink>
-        <NavLink to="#project" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>PROJECT</NavLink>
-        <NavLink to="#experience" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>EXPERIENCE</NavLink>
-        <NavLink to="#contact" smooth className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>CONTACT</NavLink>
+    <div className='nav-link flex absolute w-full gap-12 flex-col text-center items-center lg:relative lg:flex-row bg-tWhite dark:bg-dark dark:text-white'>
+        <SmoothHashLink to="#Home" smootherRef={smootherRef} className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>HOME</SmoothHashLink>
+        <SmoothHashLink to="#aboutMe" smootherRef={smootherRef} className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>ABOUT ME</SmoothHashLink>
+        <SmoothHashLink to="#project" smootherRef={smootherRef} className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>PROJECT</SmoothHashLink>
+        <SmoothHashLink to="#experience" smootherRef={smootherRef} className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>EXPERIENCE</SmoothHashLink>
+        <SmoothHashLink to="#contact" smootherRef={smootherRef} className='hover:text-mainColor hover:border-b-2 hover:border-mainColor transition ease-in-out delay-150'>CONTACT</SmoothHashLink>
         <button onClick={handleClick}>{mode ? <MdLightMode /> : <MdOutlineDarkMode /> }</button>
     </div>
     );
@@ -47,9 +67,12 @@ const Navbar = () => {
     const toggledMenu = () => {
         setIsOpen(!isOpen);
     }
+
+
+
     return (
     <header className='flex flex-wrap justify-center w-full dark:bg-dark'>
-        <nav className='flex  h-24 items-center justify-between w-3/4 z-10 p-5'>
+        <nav className='flex h-24 items-center justify-between w-3/4 z-10 p-5'>
             <NavLink to="/">
                 <img 
                     src={desktopHeaderLogo}
