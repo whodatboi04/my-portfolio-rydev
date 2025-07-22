@@ -6,11 +6,10 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import mobileHeaderLogo from '../Image/infinity.png'
 import desktopHeaderLogo from '../Image/infinityrydev-high-resolution-logo-transparent.png'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import SmoothHashLink from './SmoothHashLink';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollSmoother);
 
 //Navigation anchor tag
 const NavLinks = () => {
