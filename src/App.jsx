@@ -5,8 +5,10 @@ import Portfolio from './_portfolio/portfolio';
 import Footer from './Components/Footer';
 import { Infinity } from 'ldrs/react'
 import 'ldrs/react/Infinity.css'
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+// import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
 import gsap from 'gsap';
+import { ScrollSmoother } from 'gsap/all';
 
 
 

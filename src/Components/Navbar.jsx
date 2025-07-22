@@ -6,8 +6,9 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import mobileHeaderLogo from '../Image/infinity.png'
 import desktopHeaderLogo from '../Image/infinityrydev-high-resolution-logo-transparent.png'
 import gsap from 'gsap';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
 import SmoothHashLink from './SmoothHashLink';
+import { ScrollSmoother } from 'gsap/all';
 
 gsap.registerPlugin(ScrollSmoother);
 
