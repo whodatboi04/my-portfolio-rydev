@@ -8,10 +8,18 @@ import ottLogo from '../../Image/ott-logo.png'
 import infinityDevLogo from '../../Image/infinity.png'
 import Button from '../../Components/Button';
 import Abes from '../../Image/ABES.png';
+import InfinityHotel from '../../Image/hotel-logo.svg';
 
 export default function project() {
     const projects = [
-         {
+        {
+            title: 'Infinity Hotel',
+            desc: 'Infinity Hotel is a sample of a  hotel management system that allows users to book rooms, manage reservations, and view hotel information.',
+            image: InfinityHotel,
+            link: 'https://infinity-hotel.vercel.app/',
+            tools: 'Laravel, Rest API, MySQL, ReactJS, Tailwind CSS'
+        },
+        {
             title: 'Abes Media',
             desc: 'Abes Media is a UGC‑focused content agency that helps businesses grow through engaging video content, creative strategy, and hands‑on content production.',
             image: Abes,
