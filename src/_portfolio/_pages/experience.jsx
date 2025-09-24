@@ -20,7 +20,7 @@ export default function experience() {
                         />
                         <div className='ml-5'>
                             <h2 className='text-dark text-[10px] font-extrabold lg:text-sm dark:text-lightGreen'>PHILIPPINE COLLEGE OF PHYSICIANS</h2>
-                            <p className=' text-[10px] lg:text-sm dark:text-tWhite'>IT Programmer</p>
+                            <p className=' text-[10px] lg:text-sm dark:text-tWhite'>Senior IT Programmer</p>
                             <p className='text-lightColor text-[9px] lg:text-sm'>09/2023 - 02/2025</p>
                         </div> 
                     </li>
