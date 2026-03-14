@@ -9,15 +9,31 @@ import infinityDevLogo from '../../Image/infinity.png'
 import Button from '../../Components/Button';
 import Abes from '../../Image/ABES.png';
 import InfinityHotel from '../../Image/hotel-logo.svg';
+import MetanoiaLogo from '../../Image/metanoia-logo.png'
+import EponLogo from '../../Image/epon-logo.png'
 
 export default function project() {
     const projects = [
         {
+            title: 'E-PON (in progress)',
+            desc: 'E-PON is a smart financial tracking system with an AI advisor that guides you in managing expenses and saving money to achieve your financial goals.',
+            image: EponLogo,
+            link: 'https://e-pon.vercel.app/',
+            tools: 'PHP, Laravel, ReactJs, TypeScript, MySql, Gemini-3'
+        },
+        {
+            title: 'Metanoia TGC',
+            desc: 'Metanoia TGC is a community of believers committed to growing in God truth and grace.',
+            image: MetanoiaLogo,
+            link: 'https://infinity-hotel.vercel.app/',
+            tools: 'Laravel, Rest API, MySQL, ReactJS, Tailwind CSS'
+        },
+        {
             title: 'Infinity Hotel',
             desc: 'Infinity Hotel is a sample of a  hotel management system that allows users to book rooms, manage reservations, and view hotel information.',
             image: InfinityHotel,
-            link: 'https://infinity-hotel.vercel.app/',
-            tools: 'Laravel, Rest API, MySQL, ReactJS, Tailwind CSS'
+            link: 'https://metanoia-tgc.vercel.app/',
+            tools: 'ReactJs, TypeScript, TailwindCss'
         },
         {
             title: 'Abes Media',
