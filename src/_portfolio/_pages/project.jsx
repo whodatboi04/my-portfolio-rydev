@@ -25,8 +25,8 @@ export default function project() {
             title: 'Metanoia TGC',
             desc: 'Metanoia TGC is a community of believers committed to growing in God truth and grace.',
             image: MetanoiaLogo,
-            link: 'https://infinity-hotel.vercel.app/',
-            tools: 'Laravel, Rest API, MySQL, ReactJS, Tailwind CSS'
+            link: 'https://metanoia-tgc.vercel.app/',
+            tools: ' ReactJS, TypeScript, Tailwind CSS'
         },
         {
             title: 'Infinity Hotel',
